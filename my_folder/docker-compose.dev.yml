@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  app:
+    container_name: reactjs-web-app
+    image: reactjs-web-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app/src
+    ports:
+      - 3000:3000
